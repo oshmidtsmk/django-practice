@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Django guitar page</title>
+    <link rel="stylesheet" href="{% static 'css/my_style.css' %}">
+  </head>
+  <body>
+    <h1>This is Django page</h1>
+    {{help_message}}
+    <img src="{% static 'images/django.jpeg' %}" alt="Oh-oh">
+  </body>
+</html>

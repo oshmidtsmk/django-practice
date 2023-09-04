@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Django Level Two</title>
+    <link rel="stylesheet" href="{% static 'css/my_style.css' %}"/>
+  </head>
+  <body>
+    <h1>Hi, below are the fake users</h1>
+    <div class="djangtwo">
+
+      {% if users %}
+        <ol>
+          {% for user in users %}
+              <li>User info:</li>
+              <ul>
+                <li>First Name: {{user.first_name}}</li>
+                <li>Last Name: {{user.last_name}}</li>
+                <li>Email: {{user.email}}</li>
+              </ul>
+
+            {% endfor %}
+        </ol>
+
+      {% else %}
+        <p>No Access Records. Table Not Created.</p>
+      {% endif %}
+    </div>
+
+
+  </body>
+</html>
